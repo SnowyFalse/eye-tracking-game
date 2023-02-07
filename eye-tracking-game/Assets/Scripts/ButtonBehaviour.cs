@@ -16,11 +16,9 @@ public class ButtonBehaviour : MonoBehaviour
 
         if (CompareTag("B_Button") && Input.GetKeyDown(KeyCode.B))
         {
-            Debug.Log("SUCCESS");
             Destroy(gameObject);
         } else if (CompareTag("A_Button") && Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("SUCCESS");
             Destroy(gameObject);
         } else if (CompareTag("Glitch") && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.B)))
         {

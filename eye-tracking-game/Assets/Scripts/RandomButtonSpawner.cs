@@ -17,21 +17,11 @@ public class RandomButtonSpawner : MonoBehaviour
         if (elapsedSeconds >= seconds)
         {
             int randomIndex = Random.Range(0, myObjects.Length);
-            Debug.Log("TEST");
             
             Vector2 randomPos = new Vector2(Random.Range(-7, 7), Random.Range(-4, 4));
-            
             Instantiate(myObjects[randomIndex], randomPos, Quaternion.identity);
+            
             elapsedSeconds = 0;
         }
     }
-    
-    // IEnumerator SpawnButton()
-    // {
-    //     int randomIndex = Random.Range(0, myObjects.Length);
-    //     Debug.Log("TEST");
-    //     Vector2 randomPos = new Vector2(Random.Range(-7, 7), Random.Range(-4, 4));
-    //
-    //     Instantiate(myObjects[randomIndex], randomPos, Quaternion.identity);
-    // }
 }
