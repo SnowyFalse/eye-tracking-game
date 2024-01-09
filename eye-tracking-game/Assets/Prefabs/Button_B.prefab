@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3410654178445274244}
   - component: {fileID: 3410654178445274245}
   - component: {fileID: 2395125310522072063}
+  - component: {fileID: 3383180961298330508}
+  - component: {fileID: -3288603683582319474}
   m_Layer: 0
   m_Name: Button_B
   m_TagString: B_Button
@@ -95,3 +97,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd15feedf30dffd47b4af87373bcdabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3383180961298330508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410654178445274246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d87d489c55fc504987b709bbe1e4ec5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &-3288603683582319474
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410654178445274246}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 7.205
+  m_Center: {x: 0, y: 0, z: 0}
