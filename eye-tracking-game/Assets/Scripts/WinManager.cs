@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WinManager : MonoBehaviour
 {
@@ -34,7 +32,7 @@ public class WinManager : MonoBehaviour
         }
         if (VirtualInputManager.Instance.loseCounter >= 3)
         {
-            thirdHeart.SetActive(false);
+            SceneManager.LoadScene("GameLost");
             Debug.Log("you lost");
 
         }
