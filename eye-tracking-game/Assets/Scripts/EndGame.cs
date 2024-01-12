@@ -17,6 +17,6 @@ public class EndGame : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("Start");
     }
 }
