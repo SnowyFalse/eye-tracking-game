@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4065490493594071659}
   m_Layer: 0
   m_Name: Button_Y
-  m_TagString: B_Button
+  m_TagString: Y_Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

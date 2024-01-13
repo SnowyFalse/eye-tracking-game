@@ -9,7 +9,7 @@ public class RandomButtonSpawner : MonoBehaviour
     public float seconds;
 
     private float elapsedSeconds;
-    
+
     
     protected void Update()
     {
@@ -22,6 +22,9 @@ public class RandomButtonSpawner : MonoBehaviour
             Instantiate(myObjects[randomIndex], randomPos, Quaternion.identity);
             
             elapsedSeconds = 0;
+            if(seconds >= 0.25)
+                seconds -= 0.01f;
         }
+        Debug.Log("Seconds: "+ seconds);
     }
 }

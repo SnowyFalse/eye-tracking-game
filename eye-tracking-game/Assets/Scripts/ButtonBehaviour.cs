@@ -5,7 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(GazeAware))]
 public class ButtonBehaviour : MonoBehaviour
 {
+
     private GazeAware _gazeAwareComponent;
+    private float waitingTime = 2f;
     
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,7 @@ public class ButtonBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         if (_gazeAwareComponent.HasGazeFocus)
         {
             if (CompareTag("B_Button"))
@@ -77,19 +79,16 @@ public class ButtonBehaviour : MonoBehaviour
                 Debug.Log("FAILED");
             }
         }
-        
+
+        if( waitingTime >= 1f)
+            waitingTime -= 0.001f;
+
         
     }
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(waitingTime);
         Destroy(gameObject);
     }
-    // private void OnCollisionEnter2D(Collision2D c)
-    // {
-    //     if (CompareTag("Gaze_Point"))
-    //     {
-    //         Debug.Log("Works");
-    //     }
-    // }
+    
 }
