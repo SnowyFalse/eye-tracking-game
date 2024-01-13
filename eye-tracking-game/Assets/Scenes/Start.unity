@@ -288,6 +288,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectEasy: {fileID: 1945666170}
   SelectHard: {fileID: 1429165520}
+  button_easy: {fileID: 46820244}
+  button_hard: {fileID: 1139474818}
 --- !u!114 &172118221
 MonoBehaviour:
   m_ObjectHideFlags: 0

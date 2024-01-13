@@ -12,6 +12,9 @@ public class StartGame : MonoBehaviour
     public Image SelectEasy;
     public Image SelectHard;
     
+    public Button button_easy;
+    public Button button_hard;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,12 @@ public class StartGame : MonoBehaviour
         {
             SelectEasy.gameObject.SetActive(false);
             SelectHard.gameObject.SetActive(true);
+        }
+        
+        if(Input.GetKeyDown(KeyCode.X)) {
+     
+            //Invoke the button's onClick event.
+            button_easy.onClick.Invoke();
         }
     }
 

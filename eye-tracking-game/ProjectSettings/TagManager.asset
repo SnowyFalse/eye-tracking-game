@@ -8,6 +8,8 @@ TagManager:
   - A_Button
   - Glitch
   - Gaze_Point
+  - X_Button
+  - Y_Button
   layers:
   - Default
   - TransparentFX
