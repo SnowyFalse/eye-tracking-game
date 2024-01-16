@@ -16,7 +16,7 @@ public class EndGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.X)) {
+        if(Input.GetKeyDown(KeyCode.Joystick1Button1)) {
      
             //Invoke the button's onClick event.
             startButton.onClick.Invoke();
