@@ -25,12 +25,12 @@ public class ButtonBehaviour : MonoBehaviour
         {
             if (CompareTag("B_Button"))
             {
-                if (Input.GetKeyDown(KeyCode.B))
+                if (Input.GetKeyDown(KeyCode.Joystick1Button1))
                 {
                     VirtualInputManager.Instance.winCounter++;
                     Debug.Log("Correct");
                     Destroy(gameObject);
-                } else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Y))
+                } else if (Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.Joystick1Button0))
                 {
                     VirtualInputManager.Instance.loseCounter++;
                     Debug.Log("WRONG: " + VirtualInputManager.Instance.loseCounter);
@@ -38,11 +38,11 @@ public class ButtonBehaviour : MonoBehaviour
                 }
             } else if (CompareTag("A_Button"))
             {
-                if (Input.GetKeyDown(KeyCode.A))
+                if (Input.GetKeyDown(KeyCode.Joystick1Button2))
                 {
                     VirtualInputManager.Instance.winCounter++;
                     Destroy(gameObject);
-                } else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Y))
+                } else if (Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.Joystick1Button3) || Input.GetKeyDown(KeyCode.Joystick1Button0))
                 {
                     VirtualInputManager.Instance.loseCounter++;
                     Debug.Log("WRONG: " + VirtualInputManager.Instance.loseCounter);
@@ -50,11 +50,11 @@ public class ButtonBehaviour : MonoBehaviour
                 }
             } else if (CompareTag("X_Button"))
             {
-                if (Input.GetKeyDown(KeyCode.X))
+                if (Input.GetKeyDown(KeyCode.Joystick1Button3))
                 {
                     VirtualInputManager.Instance.winCounter++;
                     Destroy(gameObject);
-                } else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.Y))
+                } else if (Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.Joystick1Button0))
                 {
                     VirtualInputManager.Instance.loseCounter++;
                     Debug.Log("WRONG: " + VirtualInputManager.Instance.loseCounter);
@@ -62,18 +62,18 @@ public class ButtonBehaviour : MonoBehaviour
                 }
             } else if (CompareTag("Y_Button"))
             {
-                if (Input.GetKeyDown(KeyCode.Y))
+                if (Input.GetKeyDown(KeyCode.Joystick1Button0))
                 {
                     VirtualInputManager.Instance.winCounter++;
                     Destroy(gameObject);
-                } else if (Input.GetKeyDown(KeyCode.B) || Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.A))
+                } else if (Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.Joystick1Button2) || Input.GetKeyDown(KeyCode.Joystick1Button3))
                 {
                     VirtualInputManager.Instance.loseCounter++;
                     Debug.Log("WRONG: " + VirtualInputManager.Instance.loseCounter);
                     Destroy(gameObject);
                 }
 
-            } else if (CompareTag("Glitch") && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.B)|| Input.GetKeyDown(KeyCode.X)|| Input.GetKeyDown(KeyCode.Y)))
+            } else if (CompareTag("Glitch") && (Input.GetKeyDown(KeyCode.Joystick1Button0) || Input.GetKeyDown(KeyCode.Joystick1Button1)|| Input.GetKeyDown(KeyCode.Joystick1Button2)|| Input.GetKeyDown(KeyCode.Joystick1Button3)))
             {
                 VirtualInputManager.Instance.loseCounter = 3;
                 Debug.Log("FAILED");

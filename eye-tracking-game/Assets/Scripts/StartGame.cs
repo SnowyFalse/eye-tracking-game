@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+/*
+ * Joystick1Button0 ? Y
+ * Joystick1Button1 ? B
+ * Joystick1Button2 ? A
+ * Joystick1Button3 ? X
+ */
 public class StartGame : MonoBehaviour
 {
     private bool easyGame = true;
@@ -19,12 +24,29 @@ public class StartGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            SetHardGame();
+            Debug.Log("Hard game mode");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+        {
+            SetEasyGame();
+            Debug.Log("Easy game mode");
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+            StartMain();
+
         if (easyGame)
         {
             SelectEasy.gameObject.SetActive(true);
