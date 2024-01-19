@@ -18,7 +18,7 @@ public class RandomButtonSpawner : MonoBehaviour
         {
             int randomIndex = Random.Range(0, myObjects.Length);
             
-            Vector2 randomPos = new Vector2(Random.Range(-7, 7), Random.Range(-4, 4));
+            Vector2 randomPos = new Vector2(Random.Range(-2, 2), Random.Range(-4.3f, 4.3f));
             Instantiate(myObjects[randomIndex], randomPos, Quaternion.identity);
             
             elapsedSeconds = 0;

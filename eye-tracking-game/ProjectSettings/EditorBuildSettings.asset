@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Gameplay_easy.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Samples/Tobii Unity SDK for Desktop/5.0.0/Gaze Point Data/Example_GazePointData.unity
-    guid: c43802c7425e06a4d84124f09497f82b
-  - enabled: 1
     path: Assets/Scenes/Start.unity
     guid: 1398dd99049c335498df7842a403a42e
   - enabled: 1
@@ -20,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay_hard.unity
     guid: abc7d60356ef17f45a639d36fda6e802
+  - enabled: 1
+    path: Assets/Scenes/Gameplay_easy.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
