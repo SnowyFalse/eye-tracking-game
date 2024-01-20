@@ -10,6 +10,13 @@ using UnityEngine.UI;
  * Joystick1Button2 ? A
  * Joystick1Button3 ? X
  */
+
+/*
+ * Joystick1Button0 ? A
+ * Joystick1Button1 ? B
+ * Joystick1Button2 ? X
+ * Joystick1Button3 ? Y
+ */
 public class StartGame : MonoBehaviour
 {
     private bool easyGame = true;
@@ -36,13 +43,13 @@ public class StartGame : MonoBehaviour
             Debug.Log("Hard game mode");
         }
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button3))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
             SetEasyGame();
             Debug.Log("Easy game mode");
         }
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button2))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
             StartMain();
 
         if (easyGame)
