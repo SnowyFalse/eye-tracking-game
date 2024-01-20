@@ -39,7 +39,7 @@ public class ButtonBehaviour : MonoBehaviour
         {
             if (CompareTag("B_Button"))
             {
-                if (Input.GetKeyDown(KeyCode.Joystick4Button1))
+                if (Input.GetKeyDown(KeyCode.Joystick1Button1))
                 {
                     VirtualInputManager.Instance.winCounter++;
                     Debug.Log("Correct");
