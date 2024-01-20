@@ -1,18 +1,38 @@
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class RandomButtonSpawner : MonoBehaviour
 {
 
     public GameObject[] myObjects;
-    // Start is called before the first frame update
    
     public float seconds;
+    public Image Indicator;
+
 
     private float elapsedSeconds;
 
-    
+    protected void Start()
+    {
+        StartCoroutine(ShowIndicator());
+
+    }
+
     protected void Update()
     {
+        
+        foreach(KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+        {
+            if (Input.GetKeyDown(kcode))
+            {
+                Destroy(Indicator);
+                StopCoroutine(ShowIndicator());
+            }
+        }
+        
         elapsedSeconds += Time.deltaTime;
         if (elapsedSeconds >= seconds)
         {
@@ -25,6 +45,12 @@ public class RandomButtonSpawner : MonoBehaviour
             if(seconds >= 0.25)
                 seconds -= 0.01f;
         }
-        Debug.Log("Seconds: "+ seconds);
+    }
+    
+    IEnumerator ShowIndicator()
+    {
+        yield return new WaitForSeconds(10); 
+        if(Indicator) 
+            Indicator.gameObject.SetActive(true);
     }
 }

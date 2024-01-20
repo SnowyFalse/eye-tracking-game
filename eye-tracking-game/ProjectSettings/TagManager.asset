@@ -10,6 +10,7 @@ TagManager:
   - Gaze_Point
   - X_Button
   - Y_Button
+  - Indicator
   layers:
   - Default
   - TransparentFX

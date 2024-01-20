@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,8 +18,6 @@ public class StartGame : MonoBehaviour
     public Image SelectEasy;
     public Image SelectHard;
     
-    public Button button_easy;
-    public Button button_hard;
     
 
     // Start is called before the first frame update
@@ -29,7 +28,7 @@ public class StartGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
@@ -41,7 +40,6 @@ public class StartGame : MonoBehaviour
         {
             SetEasyGame();
             Debug.Log("Easy game mode");
-
         }
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button2))
@@ -58,12 +56,7 @@ public class StartGame : MonoBehaviour
             SelectEasy.gameObject.SetActive(false);
             SelectHard.gameObject.SetActive(true);
         }
-        
-        if(Input.GetKeyDown(KeyCode.X)) {
-     
-            //Invoke the button's onClick event.
-            button_easy.onClick.Invoke();
-        }
+       
     }
 
     public void SetEasyGame()
