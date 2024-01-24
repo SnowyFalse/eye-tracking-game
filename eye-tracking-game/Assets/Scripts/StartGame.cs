@@ -36,7 +36,13 @@ public class StartGame : MonoBehaviour
     void Update()
     {
         
-
+        foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+        {
+            if (Input.GetKeyDown(kcode))
+            {
+                Debug.Log("Key: " + kcode);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
             SetHardGame();
