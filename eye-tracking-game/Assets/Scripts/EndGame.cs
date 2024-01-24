@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class EndGame : MonoBehaviour
@@ -16,9 +16,9 @@ public class EndGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Joystick1Button1)) {
-     
-            SceneManager.LoadScene("Start");
+        if(Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            NewGame();
         }
     }
 
