@@ -22,8 +22,6 @@ public class StartGame : MonoBehaviour
     private bool easyGame = true;
     private bool hardGame = false;
 
-    public Image SelectEasy;
-    public Image SelectHard;
     
     
 
@@ -45,54 +43,17 @@ public class StartGame : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Joystick1Button1))
         {
-            SetHardGame();
+            SceneManager.LoadScene("Gameplay_hard");
             Debug.Log("Hard game mode");
         }
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
-            SetEasyGame();
+            SceneManager.LoadScene("Gameplay_easy");
             Debug.Log("Easy game mode");
         }
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
-            StartMain();
-
-        if (easyGame)
-        {
-            SelectEasy.gameObject.SetActive(true);
-            SelectHard.gameObject.SetActive(false);
-        }
-
-        if (hardGame)
-        {
-            SelectEasy.gameObject.SetActive(false);
-            SelectHard.gameObject.SetActive(true);
-        }
-       
+        
     }
 
-    public void SetEasyGame()
-    {
-        easyGame = true;
-        hardGame = false;
-    }
-    
-    public void SetHardGame()
-    {
-        easyGame = false;
-        hardGame = true;
-    }
-
-    public void StartMain()
-    {
-        if (easyGame)
-        {
-            SceneManager.LoadScene("Gameplay_easy");
-        }
-        else
-        {
-            SceneManager.LoadScene("Gameplay_hard");
-        }
-    }
 }
