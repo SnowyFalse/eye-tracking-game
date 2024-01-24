@@ -77,8 +77,11 @@ public class RandomButtonSpawner : MonoBehaviour
     
     public void Restart()
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Start");
+        if (Time.timeScale == 0)
+        {
+            Time.timeScale = 1;
+            SceneManager.LoadScene("Start");
+        }
     }
 
     public void Resume()
