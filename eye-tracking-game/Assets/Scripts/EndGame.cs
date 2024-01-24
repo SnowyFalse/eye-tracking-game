@@ -18,8 +18,7 @@ public class EndGame : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Joystick1Button1)) {
      
-            //Invoke the button's onClick event.
-            startButton.onClick.Invoke();
+            SceneManager.LoadScene("Start");
         }
     }
 
